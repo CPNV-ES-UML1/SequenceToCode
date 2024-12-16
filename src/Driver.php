@@ -1,17 +1,27 @@
 <?php
 
-require_once "Person.php";
+require_once "/src/Person.php";
+require_once "/src/Vehicle.php"
 class Driver extends Person {
 
-    private $driver;
+    private $emailadress;
 
-    public function takeAVehicle ($vehicle) {
-        // Code qui prend la voiture
-        return $vehicleChoose
+    public function __construct( string $emailadress) {
+        $this->emailadress = $emailadress;
     }
 
-    public static function findByEmail ($driverEmailadress) {
-        // Code récup. driver
-        return $driver;
+    public function takeVehicle ($vehicle) {
+
+        $vehicles = new Vehicle();
+        $allVehicles = $vehicles->getAll();
+
+        foreach ($allVehicles as $allVehicle) {
+            if ($allVehicle === $vehicle) {
+                return $allVehicle;
+            }
+            else {
+                throw new Exception('Vehicle not available.');
+            }
+        }
     }
 }

@@ -2,25 +2,51 @@
 
 class Entreprise {
 
-    private $chassisNumber;
-    private $driverEmailadress;
+    private $chassisNumbers = [];
+    private $driverEmailadresses = [];
 
-    public function assignVehicleToDriver ($chassisNumber,$driverEmailadress) {
-        $this->chassisNumber = $chassisNumber;
-        $this->driverEmailadress = $driverEmailadress;
+    public function addDriver (Driver $driverEmailadress){
+        $this->driverEmailadresses = $driverEmailadress;
+    }
+
+    public function addVehicle (Vehicle $chassisNumber){
+        $this->chassisNumbers = $chassisNumber;
+    }
+
+    public function assignVehicleToDriver (string $chassisNumber, string $driverEmailadress) {
+      
+        $driver = $this->getDriverByEmailadress($driverEmailadress);
+        $vehicle = $this->getVehicleByChassisNumber($chassisNumber);
+
+        $driver->takeVehicle($vehicle);
+
+        $vehicle->setDriver($driver);
 
         return;
     }
 
     private function getDriverByEmailadress ($driverEmailadress) {
-        
-        $driver = Driver::findByEmail($driverEmailadress);
 
-        return $driver;
+        foreach ($this->driverEmailadresses as $emailadress) {
+            if ($emailadress === $driverEmailadress) {
+                return $emailadress;
+            }
+            else {
+                throw new Exception('Driver not found.');
+            }
+        }
     }
 
     private function getVehicleByChassisNumber ($chassisNumber) {
-        $vehicle = Vehicle::getByChassisNumber($chassisNumber);
-        return $vehicle;
+
+        foreach ($this->chassisNumbers as $number) {
+            if ($number === $chassisNumber) {
+                return $number;
+            }
+            else {
+                throw new Exception('Vehicle not found.');
+            }
+        }
+        return ;
     }
 }
