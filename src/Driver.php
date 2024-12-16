@@ -1,7 +1,7 @@
 <?php
 
-require_once "/src/Person.php";
-require_once "/src/Vehicle.php"
+require_once "src/Person.php";
+require_once "src/Vehicle.php"
 class Driver extends Person {
 
     private $emailadress;
