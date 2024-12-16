@@ -6,6 +6,13 @@ title: Driver Diagram Class
 
 classDiagram
 
+    note "Project: UML1-SequenteToCode
+    Title: SequenteToCode Class Diagram
+    Author: Schneider Julien
+    Date: 16/12/24
+    Version: 1.0"
+
+
     class Main {
         - assignVehicleToDriver () void
     }
