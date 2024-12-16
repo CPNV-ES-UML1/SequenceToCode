@@ -7,35 +7,35 @@ title: Driver Diagram Class
 classDiagram
 
     class Main {
-        - assignVehicleToDriver () : void
+        - assignVehicleToDriver () void
     }
 
     Main --> Entreprise
 
     class Entreprise {
 
-        + assignVehicleToDriver(chassisNumber : string, driverEmailadress : string) : void
+        + assignVehicleToDriver(chassisNumber : string, driverEmailadress : string) void
 
-        - getDriverByEmailadress(driverEmailadress : string) : Driver
+        - getDriverByEmailadress(driverEmailadress : string) Driver
 
-        - getVehicleByChassisNumber(chassisNumber : string) : Vehicle
+        - getVehicleByChassisNumber(chassisNumber : string) Vehicle
     }
 
     Entreprise --> Vehicle
     Entreprise --> Driver
 
     class Driver {
-        + takeAVehicle(vehicle : vehicle) : void
-        + getDriver () : Driver
+        + takeAVehicle(vehicle : vehicle) void
+        + findByEmail (driverEmailadress : string) Driver
        }
         Driver <|-- Person
         Driver -- Vehicle
 
     class Person {
-        + getEmailadress () : Person
+        + getEmailadress () Person
        }
 
     class Vehicle {
-        + getVehicle () : Vehicle
+        + getVehicle () Vehicle
        }
 ```

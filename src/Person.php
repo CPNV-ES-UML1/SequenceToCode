@@ -1,3 +1,7 @@
+<?php
 class Person {
-        + getEmailadress () : Person
-       }
+    public function getEmailadress () {
+        return $person;
+    }
+}
+    
