@@ -1,3 +1,9 @@
+<?php
 class Person {
-        + getEmailadress () : Person
-       }
+
+    public function __construct() {
+        ;
+    }
+    
+}
+    
