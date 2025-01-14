@@ -11,16 +11,16 @@ La question à laquelle répondre en réalisant votre architecture est "Quelle e
 
 Chaque technicien atteindra les objectifs suivants en réalisant ce laboratoire:
 
-- [ ] Analyser un diagramme de séquence afin de se familiariser à la norme imposée.
-- [ ] Dessiner l'architecture (diagramme de classe) minimale pour pouvoir réaliser la séquence.
-- [ ] Coder, dans le langage de son choix, la séquence.
-- [ ] Revisiter les notions de "git-flow" et de "conventional commit" en appliquant les pratiques aussi bien 
-    * lors de la création du diagramme de classe (plant uml ou autre outil de "uml as code")
-    * lors de l'écriture du code
-- [ ] Réalisez un fork de ce dépôt.
-- [ ] Appliquer la structure suivante à votre dépôt:
+* [ ] Analyser un diagramme de séquence afin de se familiariser à la norme imposée.
+* [ ] Dessiner l'architecture (diagramme de classe) minimale pour pouvoir réaliser la séquence.
+* [ ] Coder, dans le langage de son choix, la séquence.
+* [ ] Revisiter les notions de "git-flow" et de "conventional commit" en appliquant les pratiques aussi bien 
+    - lors de la création du diagramme de classe (plant uml ou autre outil de "uml as code")
+    - lors de l'écriture du code
+* [ ] Réalisez un fork de ce dépôt.
+* [ ] Appliquer la structure suivante à votre dépôt:
 
-  ```
+```
   <yourProject>
   ├───docs
   └───src
@@ -41,6 +41,7 @@ Chaque technicien atteindra les objectifs suivants en réalisant ce laboratoire:
    - [ ] La classe Person:
       * est identifiée grâce à une adresse email.
    - [ ] La classe Vehicle:
+
      * est identifiée grâce à son numéro de chassis.
 
 ## Livraison
